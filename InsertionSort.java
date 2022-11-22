@@ -1,7 +1,11 @@
 import java.util.Scanner;
 public class InsertionSort {
     /* 
-     * sort method 
+     * method to sort array using "insertion sort":
+     * start at second item in array and iterate 
+     * through array. Each time you move to a new item
+     * compare with previous and swap if smaller until 
+     * previous is larger
     */
     public static int[] sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
