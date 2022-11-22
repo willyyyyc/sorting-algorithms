@@ -4,6 +4,15 @@ public class InsertionSort {
      * sort method 
     */
     public static int[] sort(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            int curr = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j] > curr) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j + 1] = curr;
+        }
         return array;
     }
     
@@ -26,6 +35,7 @@ public class InsertionSort {
         for (int num : arrayToBeSorted) {
             System.out.print(num + " ");
         }
+
         in.close();
     }
 }
